@@ -17,20 +17,20 @@ function handleSubmit(event) {
         // Get data from Geonames API
         Client.postData(`/location`, { city })
             .then(locationData => {
-                destinationName = `${locationData.geonames[0].name}, ${locationData.geonames[0].countryName}`
+                destinationName = `${locationData.name}, ${locationData.countryName}`
 
                 const coordinates = {
-                    lat: locationData.geonames[0].lat,
-                    lng: locationData.geonames[0].lng,
+                    lat: locationData.lat,
+                    lng: locationData.lng,
                 }
                 // Get data from WeatherBIT API
                 return Client.postData(`/weather`, coordinates)
             }).then(weatherData => {
-                destinationWeather = `${weatherData.data[2].temp}&degC ${weatherData.data[2].weather.description}`
+                destinationWeather = `${weatherData.temp}&degC ${weatherData.weather.description}`
                 // Get destination picture from Pixabay API
                 return Client.postData(`/picture`, { city })
             }).then(pictureData => {
-                destinationPicture = pictureData.hits[0].webformatURL;
+                destinationPicture = pictureData.webformatURL;
             }).then(() => {
                 // Update the UI with the result
                 Client.updateUI(destinationPicture, destinationName, destinationWeather, departDate, returnDate);

@@ -11,7 +11,7 @@
 ## Instructions
 
 * Download the zip file locally.
-* Navigate to the project directory `cd ***` Replace *** with the project directory
+* Navigate to the project directory `cd ***` Replace *** with the project directory.
 * Install all dependencies using command `npm i`
 * Go to [Geonames](http://www.geonames.org/export/web-services.html) and register for an account.
 * Go to [Weatherbit](https://www.weatherbit.io/account/create) and register for an account.
@@ -23,9 +23,13 @@
 * To run the developer server use command `npm run build-dev`
 * The developer server runs on `localhost:8080`
 ```
-* To run the production server use first `npm run go`
+* To run the production server use `npm run go`
 * The production server runs on `localhost:8081`
 ```
+
+## Project Extensions
+
+* Added end date to display length of trip.
 
 ## Preview
 
