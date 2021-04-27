@@ -1,0 +1,33 @@
+// gradient from https://webgradients.com/
+form {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+    max-width: 90%;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-result {
+    line-height: 2;
+}
+
+#button {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
