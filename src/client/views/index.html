@@ -5,29 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;0,700;1,200&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-        <title>Analyzer App</title>
+        <title>Travel App</title>
     </head>
 
     <body>
 
         <header>
             <div>
-                <h1>Evaluate a news article with Natural Language Processing</h1>
+                <h1>Vacation Planner</h1>
             </div>
         </header>
 
         <main>
             <section class="content">
-                <form onsubmit="return Client.handleSubmit(event)">
-                    <label for="url">Enter Your URL Here</label>
-                    <input id="url" type="text" name="input" placeholder="https://www.example.com/">
-                    <input id="button" type="submit" value="Analyze" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <form id="tripForm">
+                    <div>
+                        <label for="destination">Destination</label>
+                        <input id="destination" type="text" placeholder="Enter a city">
+                    </div>
+                    <div>
+                        <label for="depart">Departure Date</label>
+                        <input id="depart" type="date" name="depart">
+                    </div>
+                    <div>
+                        <label for="return">Return Date</label>
+                        <input id="return" type="date" name="return">
+                    </div>
+                    <button>GO</button>
                 </form>
             </section>
 
-            <section class="form-result">
-                <h2>RESULTS:</h2>
-                <div id="results"></div>
+            <section id="tripResult">
             </section>
         </main>
 
@@ -37,7 +45,7 @@
             <div class="social">
                 <a class="social-icon" href="https://github.com/maxrazum" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                 <a class="social-icon" href="https://www.facebook.com/MaximeRazum/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-                <a class="social-icon" href="https://www.linkedin.com/in/max-razum-941b2b201/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/maxrazum/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
         </footer>
 
